@@ -1,16 +1,14 @@
-<video src="vid/Day1_onlyfeathers_stopmotion_night.mp4" controls title="A visitor on day 1"></video>
 
-<video src="vid/Day2_mixed_video.mp4" controls title="Same visitor, day 2. Mixed media mp4"></video>
+[<img src="pic/playlist (1).png">](https://www.youtube.com/watch?v=8ftNLXxl2lA)
 
-<video src="vid/esp32camNoIR_1LED5V220ohmR_night_casing_V1.mp4" controls title="version1 of the mount"></video>
+[<img src="pic/playlist (2).png>)](https://www.youtube.com/watch?v=VH_afHw79cI)
 
-<video src="vid/esp32camNoIR_1LED5V220ohmR_night_IR_on_flashled.mp4" controls title="Testing the IR LED"></video>
+[<img src="pic/playlist (3).png>)](https://www.youtube.com/watch?v=ixfo1hJ01aQ)
 
-<video src="vid/esp32camNoIR_1LED5V220ohmR_night.mp4" controls title="ALso testing the IR LED - and camera"></video>
+[<img src="pic/playlist (4).png>)](https://www.youtube.com/watch?v=2TawlGHPGfo)
 
-<video src="vid/OnlyFeathers%20LedHack.mp4" controls title="IR LED on the Flash LED"></video>
+[<img src="pic/playlist (5).png>)](https://www.youtube.com/watch?v=0XO5rdPtHgI)
 
-<video src="vid/OnlyFeathers_FireFromTheHole.MP4" controls title="Making the antenna hole"></video>
+[<img src="pic/playlist (6).png>)](https://www.youtube.com/watch?v=UGqaUv2kMJE)
 
-
-
+[<img src="pic/playlist (7).png>)](https://www.youtube.com/watch?v=cGnTstsCY98)
