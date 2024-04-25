@@ -10,6 +10,7 @@ I added [an external antenna](/Antenna.md) for better WiFi coverage as well.
 I used an esp32-cam and [designed a mount](/ESP32-CAM%20custom%20mount.md) for it that also acts as a infrared light diffuser to light the birdhouse for pictures or video's.
 
 As it appeared, it became already popular on the first day by a returning Great Tit.
+You can see it inspecting the cabling and protection in place.
 ![Visitor](<pic/OnlyFeathers_FirstVisitor (1).jpg>)
 
 For the esp32-cam I used the program [here](https://github.com/easytarget/esp32-cam-webserver/tree/master) which is an improved version of the default example program for esp32-cam webserver.
