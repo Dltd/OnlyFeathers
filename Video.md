@@ -1,3 +1,6 @@
+Full playlist [here](https://www.youtube.com/playlist?list=PLgzRFpQ9xYKAYCfvw1oh3P7lQ6fxIQnga)
+
+Links to seperate vids here:
 
 [<img src="pic/playlist (1).png">](https://www.youtube.com/watch?v=8ftNLXxl2lA)
 
