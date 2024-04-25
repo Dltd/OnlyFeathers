@@ -9,6 +9,9 @@ The final version
 
 ![The final version](<pic/OnlyFeathers 3D model final.JPEG>)
 
+![Final](<pic/OnlyFeathers (7).JPEG>)
+
+
 Meet the prototype family
 
 ![Meet the prototype family](<pic/OnlyFeathers 3D prototypes (1).JPEG>)
