@@ -119,4 +119,4 @@ for ((i=0;i<3;i++)); do
         Watermarktext=$(basename "$latest" .jpg | sed 's/only_feathers_//')
 ```
 
-[Here are some video's](/Video.md) of the building process and ![here are some pictures](/Pics.md) as well.
+[Here are some video's](/Video.md) of the building process and [here are some pictures](/Pics.md) as well.
