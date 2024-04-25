@@ -105,9 +105,17 @@ Which makes it all worth the effort of course.
 A Raspberry Pi is used to take pictures every 20 seconds, which can be converted to a timelapse video.
 For nightvision, it will turn on the LED and let the camera adjust itself to it for 4 seconds to take a picture and turn off the LED again. The script is scheduled in cron to execute every minute
 
-I updated this in the original code to make it do that:
+I use this script to make it do that:
 
 ```bash
+#!/usr/bin/bash
+
+# Set the default shell and path for the script.
+SHELL=/bin/sh PATH=/bin:/sbin:/usr/bin:/usr/sbin
+
+# Log the timestamp of execution
+echo "$(date) - Executing script" >> /var/log/onlyfeathers.log
+
 # Loop 3 times to perform the actions below.
 for ((i=0;i<3;i++)); do
 
@@ -125,6 +133,45 @@ for ((i=0;i<3;i++)); do
         latest=$(ls /home/onlyfeathers/timelapsepics/only_feathers_*.jpg -rt1 | tail -1)
         # Extract the filename without the extension for watermarking.
         Watermarktext=$(basename "$latest" .jpg | sed 's/only_feathers_//')
+
+        # Get the size of the latest image.
+        ps=$(wc -c <"$latest")
+        # Set a minimum size threshold.
+        mn=7000
+
+        # If the image is smaller than the threshold, adjust camera settings and retake the image.
+        if [ $ps -le $mn ]; then
+          curl "http://onlyfeathers.local/control?var=framesize&val=9"
+          curl "http://onlyfeathers.local/control?var=raw_gma&val=0"
+          curl "http://onlyfeathers.local/control?var=hmirror&val=0"
+          curl "http://onlyfeathers.local/control?var=vflip&val=0"
+          curl "http://onlyfeathers.local/control?var=dcw&val=0"
+          sleep 5.0
+          # Retake the image after the settings are adjusted.
+          wget http://onlyfeathers.local/capture -O "/home/onlyfeathers/timelapsepics/only_feathers_$(date +%Y-%m-%d_%H-%M-%S).jpg"
+          latest=$(ls /home/onlyfeathers/timelapsepics/only_feathers_*.jpg -rt1 | tail -1)
+        fi
+
+        # Apply a small watermark text to the image for the timestamp.
+        Fontsize=10
+        Font="Arial.ttf"
+        Fontcolour="white"
+        horizontal=$(identify -format "%w" "$latest")
+        vertical=$(identify -format "%h" "$latest")
+        Textdistancefromleft=10
+        Textdistancefrombottom=10
+        X=$Textdistancefromleft
+        Y=$((vertical - Textdistancefrombottom))
+        convert -quality 50 -pointsize $Fontsize -fill $Fontcolour -draw "text $X, $Y '$Watermarktext'" "$latest"  "$latest"
+
+        # Copy the watermarked image to the web directory.
+        cp $latest /var/www/html/only_feathers.jpg
+
+        # Wait for 17.6 seconds before the next iteration of the loop.
+        sleep 17.6
+done
+# Exit the script.
+exit
 ```
 
 [Here are some video's](/Video.md) of the building process and [here are some pictures](/Pics.md) as well.
