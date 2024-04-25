@@ -3,13 +3,13 @@ A ESP32-Cam birdhouse camera project
 ![OnlyfeathersLogo](/pic/Logo.png)
 
 To learn some more about esp32 I wanted to setup a little birdnest cam.
-I added ![an external antenna](/Antenna.md) for better WiFi coverage as well.
+I added [an external antenna](/Antenna.md) for better WiFi coverage as well.
 
 ![ProjectCollagePicture](/pic/IMG_2360.JPG)
 
-I used an esp32-cam and ![designed a mount](/ESP32-CAM%20custom%20mount.md) for it that also acts as a infrared light diffuser to light the birdhouse for pictures or video's.
+I used an esp32-cam and [designed a mount](/ESP32-CAM%20custom%20mount.md) for it that also acts as a infrared light diffuser to light the birdhouse for pictures or video's.
 
-I used a ![bright 940nm IR LED](/IR%20LED.md), which I connected to the original SMD flash LED that comes with the board. It was not hard to pry off the led and use a soldering iron and desolder thread to make it nice and clean again.
+I used a [bright 940nm IR LED](/IR%20LED.md), which I connected to the original SMD flash LED that comes with the board. It was not hard to pry off the led and use a soldering iron and desolder thread to make it nice and clean again.
 
 I set it up to update the ip to a webserver that will receive the private IP address.
 It was added because I configured multiple SSID's as redundancy which have their own subnets, this way I can always find it, regardless of the network it has connected to.
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 ```
-After it was put back on the shed, it had ![a new inhabitant the next day](/First%20Visitor.md)!
+After it was put back on the shed, it had [a new inhabitant the next day](/First%20Visitor.md)!
 Which makes it all worth the effort of course. 
 
 A Raspberry Pi is used to take pictures every 20 seconds, which can be converted to a timelapse video.
@@ -99,7 +99,7 @@ For nightvision, it will turn on the LED and let the camera adjust itself to it 
 
 I updated this in the original code to make it do that:
 
-```console
+```bash
 # Loop 3 times to perform the actions below.
 for ((i=0;i<3;i++)); do
 
@@ -119,4 +119,4 @@ for ((i=0;i<3;i++)); do
         Watermarktext=$(basename "$latest" .jpg | sed 's/only_feathers_//')
 ```
 
-![Here are some video's](/Video.md) of the building process and ![here are some pictures](/Pics.md) as well.
+[Here are some video's](/Video.md) of the building process and ![here are some pictures](/Pics.md) as well.
