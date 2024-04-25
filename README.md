@@ -9,8 +9,12 @@ I added [an external antenna](/Antenna.md) for better WiFi coverage as well.
 
 I used an esp32-cam and [designed a mount](/ESP32-CAM%20custom%20mount.md) for it that also acts as a infrared light diffuser to light the birdhouse for pictures or video's.
 
+For the esp32-cam I used the program [here](https://github.com/easytarget/esp32-cam-webserver/tree/master) which is an improved version of the default example program for esp32-cam webserver.
+It works great and is better compared to the example program.
+
 I used a [bright 940nm IR LED](/IR%20LED.md), which I connected to the original SMD flash LED that comes with the board. It was not hard to pry off the led and use a soldering iron and desolder thread to make it nice and clean again.
 
+# finding it in several networks
 I set it up to update the ip to a webserver that will receive the private IP address.
 It was added because I configured multiple SSID's as redundancy which have their own subnets, this way I can always find it, regardless of the network it has connected to.
 
